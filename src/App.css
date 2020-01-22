@@ -52,3 +52,15 @@ nav {
   display: flex;
   justify-content: space-between;
 }
+
+.directory button {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.directory button:focus {
+  outline: none;
+}
