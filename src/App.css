@@ -17,10 +17,8 @@ nav {
 .card {
   width: 75%;
   height: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  margin: 100px auto 0 auto;
   background-color: #ccc;
   padding: 40px;
 }
@@ -46,4 +44,11 @@ nav {
 
 .card ol {
   margin-left: 60px;
+}
+
+.directory {
+  width: 75%;
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-between;
 }
