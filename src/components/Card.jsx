@@ -12,7 +12,7 @@ const Card = (props) => {
       <p><strong>From:</strong> {city}, {country}</p>
       <p><strong>Job Title:</strong> {title}</p>
       <p><strong>Employer:</strong> {employer}</p>
-      <p><strong>Favorite Movies</strong></p>
+      <p><strong>Favorite Movies:</strong></p>
       <ol>
         {movieList}
       </ol>
