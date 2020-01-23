@@ -15,12 +15,24 @@ class App extends React.Component {
     }
   }
 
+  reIndex(data) {
+    data.forEach((person, i) => person.id = (i + 1))
+  }
+
   handleDir = (way) =>  {
     let result = this.state.index + +way;
     if (result < 0) result = this.state.data.length - 1;
-    if (result > 24) result = 0;
+    if (result > this.state.data.length - 1) result = 0;
 
     this.setState({ index: result });
+  }
+
+  handleDelete = (index) => {
+    this.setState(currState => {
+      currState.data.splice(index, 1);
+      this.reIndex(currState.data)
+      return { data: currState.data }
+    })
   }
 
   render() {
@@ -28,7 +40,11 @@ class App extends React.Component {
       <div className="App">
         <Nav />
         <Card person={this.state.data[this.state.index]} count={this.state.data.length} />
-        <Directory handleDir={this.handleDir} />
+        <Directory 
+          handleDelete={this.handleDelete}
+          handleDir={this.handleDir}
+          index={this.state.index}
+        />
       </div>
     );
   }

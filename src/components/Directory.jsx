@@ -6,8 +6,8 @@ const Directory = (props) => {
     <div className="directory">
       <DirectionBtns handleDir={props.handleDir} way="-1" dir="< Previews" />
       <div className="manipBtns">
-        <button>Edit</button>
-        <button>Delete</button>
+        <button >Edit</button>
+        <button onClick={() => props.handleDelete(props.index)}>Delete</button>
         <button>New</button>
       </div>
       <DirectionBtns handleDir={props.handleDir} way="1" dir="Next >" />
