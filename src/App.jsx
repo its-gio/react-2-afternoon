@@ -2,7 +2,6 @@ import React from 'react';
 import Nav from "./components/Nav"
 import Card from "./components/Card"
 import Add from "./components/Add"
-import AddDir from './components/AddDir';
 import Directory from './components/Directory';
 import './App.css';
 import data from "./data"
@@ -14,12 +13,6 @@ class App extends React.Component {
     this.state = {
       index: 0,
       data,
-      fullName: "",
-      city: "",
-      country: "",
-      title: "",
-      employer: "",
-      favoriteMovies: [],
       mode: "normal"
     }
   }
@@ -68,7 +61,6 @@ class App extends React.Component {
           <div className="App">
             <Nav />
             <Add handleModeChange={this.handleModeChange} />
-            <AddDir />
           </div>
         );
 
