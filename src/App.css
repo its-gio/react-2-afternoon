@@ -64,3 +64,10 @@ nav {
 .directory button:focus {
   outline: none;
 }
+
+.manipBtns button{
+  background-color: #34a5da;
+  margin: 0 10px;
+  padding: 5px 20px;
+  border-radius: 20px;
+}
