@@ -36,8 +36,8 @@ class App extends React.Component {
     })
   }
 
-  handleModeChangeAdd = () => {
-    this.setState({ mode: "add" })
+  handleModeChange = (mode) => {
+    this.setState({ mode })
   }
 
   handleDir = (way) =>  {
@@ -48,7 +48,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(data)
     switch (this.state.mode) {
       case "normal":
         return (
@@ -57,7 +56,7 @@ class App extends React.Component {
             <Card person={this.state.data[this.state.index]} count={this.state.data.length} />
             <Directory 
               handleDelete={this.handleDelete}
-              handleModeChangeAdd={this.handleModeChangeAdd}
+              handleModeChange={this.handleModeChange}
               handleDir={this.handleDir}
               index={this.state.index}
             />
@@ -68,7 +67,7 @@ class App extends React.Component {
         return (
           <div className="App">
             <Nav />
-            <Add />
+            <Add handleModeChange={this.handleModeChange} />
             <AddDir />
           </div>
         );

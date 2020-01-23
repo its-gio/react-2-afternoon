@@ -72,6 +72,15 @@ nav {
   border-radius: 20px;
 }
 
+.card .exitAdd {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 2rem;
+  position: absolute;
+  right: 40px;
+  top: 30px;
+}
+
 .directory.addDir {
   justify-content: center;
 }
