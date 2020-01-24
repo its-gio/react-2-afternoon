@@ -24,8 +24,9 @@ class App extends React.Component {
     })
   }
 
-  handleAdd = (person) => {
-    // let {fullname, }
+  handleAdd = (newPerson) => {
+    this.setState({ data: [...this.state.data, newPerson] })
+    this.handleModeChange("normal")
   }
 
   handleModeChange = (mode) => {
@@ -59,7 +60,7 @@ class App extends React.Component {
         return (
           <div className="App">
             <Nav />
-            <Add handleAdd={this.handleAdd} handleModeChange={this.handleModeChange} />
+            <Add handleAdd={this.handleAdd} count={this.state.data.length} handleModeChange={this.handleModeChange} />
           </div>
         );
 

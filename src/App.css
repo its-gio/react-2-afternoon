@@ -81,6 +81,14 @@ nav {
   top: 30px;
 }
 
+.card .addMovie {
+  cursor: pointer;
+}
+
+.card .movieInput {
+  display: block;
+}
+
 .directory.addDir {
   justify-content: center;
 }
