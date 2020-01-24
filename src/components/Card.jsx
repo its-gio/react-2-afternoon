@@ -3,7 +3,7 @@ import FaveMovies from './FaveMovies'
 
 const Card = (props) => {
   let { name, city, country, title, employer, favoriteMovies } = props.person
-  let movieList = favoriteMovies.map((movie, i) => <FaveMovies key={i} movie={movie} />)
+  let movieList = favoriteMovies ? favoriteMovies.map((movie, i) => <FaveMovies key={i} movie={movie} />) : "N/A";
   
   return (
     <div className="card">
