@@ -17,16 +17,15 @@ class App extends React.Component {
     }
   }
 
-  reIndex(data) {
-    data.forEach((person, i) => person.id = (i + 1))
-  }
-  
   handleDelete = (index) => {
     this.setState(currState => {
       currState.data.splice(index, 1);
-      this.reIndex(currState.data)
       return { data: currState.data }
     })
+  }
+
+  handleAdd = (person) => {
+    // let {fullname, }
   }
 
   handleModeChange = (mode) => {
@@ -46,7 +45,7 @@ class App extends React.Component {
         return (
           <div className="App">
             <Nav />
-            <Card person={this.state.data[this.state.index]} count={this.state.data.length} />
+            <Card person={this.state.data[this.state.index]} index={this.state.index} count={this.state.data.length} />
             <Directory 
               handleDelete={this.handleDelete}
               handleModeChange={this.handleModeChange}
@@ -60,7 +59,7 @@ class App extends React.Component {
         return (
           <div className="App">
             <Nav />
-            <Add handleModeChange={this.handleModeChange} />
+            <Add handleAdd={this.handleAdd} handleModeChange={this.handleModeChange} />
           </div>
         );
 
